@@ -1,3 +1,4 @@
+
 def primeFactors(p_number):
     """
     The prime factors of 13195 are 5, 7, 13 and 29.
@@ -5,6 +6,7 @@ def primeFactors(p_number):
     What is the largest prime factor of the number 600851475143 ?
 
     """
+
 
     # Initialize a list
     primes = []
@@ -24,5 +26,18 @@ def primeFactors(p_number):
 
     return prime_sum
 
+def primefactors2(n):
 
-print(primeFactors(13195))
+    i = 2
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            print('n before: {}'.format(n))
+            print(i)
+            n //= i
+            print('n after: {}'.format(n))
+    return n
+
+p = 13195
+print(primefactors2(p))
