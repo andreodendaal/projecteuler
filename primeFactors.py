@@ -33,8 +33,12 @@ def primefactors2(n):
         if n % i:
             i += 1
         else:
-            print('n before: {}'.format(n))
             print(i)
+            print('n, n1 before: {}'.format(n))
+            n1 = n
+            n1 = n1//i
+            print('n1 after: {}'.format(n1))
+
             n //= i
             print('n after: {}'.format(n))
     return n
